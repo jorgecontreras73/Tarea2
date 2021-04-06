@@ -5,35 +5,36 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Formulario</title>
         <link rel="stylesheet" href="css/estilos.css">
-
+        <link rel="stylesheet" href="">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        
     </head>
     <body bgcolor="grey">
-        <form method="POST" action="#" id="formulario">
+        <div id="mensaje"></div>
+        <form method="post" id="formulario" action="#">
             <fieldset>
-                <legend>Formulario de lenguajes de programación</legend>
+                <legend>Formulario sobre lenguajes de programación</legend>
                 <ul>
                     <li>
-                        <label for="Nombre">Nombre: </label>
-                        <input type="text" placeholder="Nombre">
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" id="nombre" placeholder="Nombre" maxlength="40" required>
                     </li>
                     <li>
-                        <label for="Apellidos">Apellidos: </label>
-                        <input type="text" placeholder="Apellidos">
+                        <label for="apellidos">Apellidos: </label>
+                        <input type="text" id="apellidos" placeholder="Apellidos" maxlength="40" required>
                     </li>
                     <li>
                         <label for="rut">Rut: </label>
-                        <input type="text" placeholder="12345678-k">
+                        <input type="text" id="rut" placeholder="12345678-k" maxlength="10" required>
                     </li>
                     <li>
                         <label for="email">Correo Electrónico: </label>
-                        <input type="email" placeholder="example@mail.com">
+                        <input type="email" id="correo" placeholder="example@mail.com" required>
                     </li>
                     <li>
                         <label for="Teléfono">Teléfono Móvil: </label>
-                        <input type="number" placeholder="9XXXXXXXX">
+                        <input type="number" id="telefono" placeholder="9XXXXXXXX" required>
                     </li>
                     
                     <li class="lenguaje"> Selecciona 1 o más lenguajes de programación de su interés
@@ -59,13 +60,13 @@
                             </p>
                             
                             <p>
-                                <input type="checkbox" value="C#" id="C#">
-                                <label for="C#">C#</label>
+                                <input type="checkbox" value="Cgato" id="Cgato">
+                                <label for="Cgato">C#</label>
                             </p>
                             
                             <p>
-                                <input type="checkbox" value="C++" id="C++">
-                                <label for="C++">C++</label>
+                                <input type="checkbox" value="Cmas" id="Cmas">
+                                <label for="Cmas">C++</label>
                             </p>
                             
 
@@ -75,27 +76,26 @@
                     <li>
                         ¿Cuál es su nivel de conocimiento en programación?
                         <div id="nivel">
-                            <input type="range" name="rango" min="0" max="10" step="1">
-                            <output for="rango"></output>
+                            <input type="range" name="rango" min="0" max="10" step="1" id="valor">
                         </div>
                         
 
                     </li>
                     <li class="tiempo">¿Cuantos años de experiencia laboral tiene?
                         <div id="tiempo">
-                            <input type="radio" value="1" id="1" name="tiempo">
+                            <input type="radio" value="1" id="1" name="anho">
                             <label for="1">1.</label>
     
-                            <input type="radio" value="2" id="2" name="tiempo">
+                            <input type="radio" value="2" id="2" name="anho">
                             <label for="2">2.</label>
     
-                            <input type="radio" value="3" id="3" name="tiempo">
+                            <input type="radio" value="3" id="3" name="anho">
                             <label for="3">3.</label>
     
-                            <input type="radio" value="4" id="4" name="tiempo">
+                            <input type="radio" value="4" id="4" name="anho">
                             <label for="4">4.</label>
     
-                            <input type="radio" value="5" id="5" name="tiempo">
+                            <input type="radio" value="5" id="5" name="anho">
                             <label for="5">5.</label>
                         </div>
                         
@@ -103,12 +103,12 @@
                     </li>
                     <li>
                         <label for="descripcion">Una breve descripción de usted:</label>
-                        <textarea id="descripcion"></textarea>
+                        <textarea id="descripcion" required></textarea>
                     </li>
 
                     <li class="button">
-                        <button id="boton1">Enviar datos</button>
-                        <button id="boton2">Limpiar datos</button>
+                        <button type="submit" id="enviar">Enviar datos</button>
+                        <button onclick="limpiarDatos()" id="limpiar">Limpiar datos</button>
                     </li>
                 </ul>
             </fieldset>

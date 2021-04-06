@@ -1,6 +1,9 @@
+#mensaje{
+    display:none;
+}
 form{
     margin-left: 20px;
-    width: 60%;
+    width: 80%;
     padding: 1em;
 }
 form ul{
@@ -15,7 +18,7 @@ label{
     margin-bottom: 10px;
 }
 input{
-    width: 50%;
+    width: 40%;
     height: 20px;
     border: 1px solid black;
     padding: 3px;
@@ -31,7 +34,10 @@ input{
     width: auto !important;
 }
 p{
-    margin: auto;
+    margin-left: 5%;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: auto;
 }
 #nivel{
     margin-top: 10px;
@@ -51,13 +57,23 @@ p{
     width: auto !important;
 }
 textarea{
-    width: 50%;
+    width: 40%;
     height: 100px;
 }
-#boton1{
+#enviar{
     margin-top: 20px;
     margin-left: 30%;
+    border-color: blue;
 }
-#boton2{
+#limpiar{
     margin-left: 20%;
+    border-color: red;
 }
+/*Eliminar las flechas de number*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] { -moz-appearance:textfield; }
+
